@@ -1,14 +1,13 @@
 import React from "react";
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="flex flex-col justify-items-center flex-wrap items-center justify-center bottom-0 fixed w-full border-grid  z-50 border-b bg-background/5 backdrop-blur supports-[backdrop-filter]:bg-background/6 p-5 ">
-      <div>
-        Ping Pilot <sup>{new Date().getFullYear()}</sup>
+    <footer className="bg-gray-200 text-gray-700 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p>
+          &copy; {new Date().getFullYear()} Ping Pilot. All rights reserved.
+        </p>
       </div>
-      <div>ⓒ All rights reserved.</div>
     </footer>
   );
 }
-
-export default Footer;
