@@ -1,0 +1,19 @@
+{
+  "default": "login",
+  "modes": {
+    "login": {
+      "logo": "/PingPilotLogo_Light.png",
+      "authIntentTitle": "Login to your Ping Pilot account",
+      "catchPhrase": "Welcome back",
+      "submitLabel": "Login",
+      "alternateAction": "Don't have an account?"
+    },
+    "signup": {
+      "logo": "/PingPilotLogo_Light.png",
+      "authIntentTitle": "Create your Ping Pilot account",
+      "catchPhrase": "Join us today",
+      "submitLabel": "Sign up",
+      "alternateAction": "Already have an account?"
+    }
+  }
+}
