@@ -3,7 +3,7 @@ import { NextResponse, NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
-  const token = request.cookies.get("auth");
+  const token = request.cookies.get("pilot_token");
 
   const isPublicPath = [
     "/login",
@@ -13,13 +13,13 @@ export async function middleware(request: NextRequest) {
     "/_next",
   ].some((path) => pathname.startsWith(path));
   const isApiPath = pathname.startsWith("/api/");
-  
+
   if (!token && (isPublicPath || isApiPath)) return NextResponse.next();
 
   // Redirect authenticated users away from the login page
   if (pathname === "/login" && token) {
     const url = request.nextUrl.clone();
-    url.pathname = "/";
+    url.pathname = "/v1/";
     return NextResponse.redirect(url);
   }
 

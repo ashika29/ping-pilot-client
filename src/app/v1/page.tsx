@@ -1,24 +1,18 @@
-"use client";
-import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 
+export const metadata = {
+  title: "Ping Pilot - Home",
+  description: "Ping Pilot - Customized to user needs",
+};
+
 export default function Home() {
-  const router = useRouter();
-  let loading = false;
-
-  const navigateToMonitorPage = () => {
-    // router.push("/monitor");
-    loading = true;
-  };
-
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <div
         className="gradient-wrapper"
         style={{
-          background:
-            "linear-gradient(180deg, #000000c4, #1B9AAA, #bec1c8)",
-          opacity: 0.5
+          background: "linear-gradient(180deg, #000000c4, #1B9AAA, #bec1c8)",
+          opacity: 0.5,
         }}
       />
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -31,13 +25,7 @@ export default function Home() {
             downtime and performance.
           </p>
           <div className="text-center">
-            <Button
-              onClick={navigateToMonitorPage}
-              variant="outline"
-              loading
-            >
-              Start Monitoring
-            </Button>
+            <Button variant="outline">Start Monitoring</Button>
           </div>
         </div>
       </main>

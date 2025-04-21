@@ -22,6 +22,10 @@ export default function LoginPage() {
       .post(url, { email, password })
       .then((response) => {
         console.log("Success:", response.data);
+        toast.success(
+          `Welcome back, ${response.data.user.name || response.data.user.email}`
+        );
+        toast.success("You are now logged in.");
         router.push("/");
       })
       .catch((error: AxiosError) => {
