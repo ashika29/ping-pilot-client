@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import skeleton from "./skeleton.json";
 import Image from "next/image";
 import React from "react";
+import logo from "@/images/PingPilotLogo_Light.png";
 
 interface IAuthenticationFormProps {
   className?: React.HTMLAttributes<HTMLDivElement>["className"];
@@ -21,7 +22,7 @@ export function AuthenticationForm({
   isLogin,
 }: IAuthenticationFormProps) {
   const authState = isLogin ? "login" : "signup";
-  const { logo, catchPhrase, authIntentTitle, submitLabel, alternateAction } =
+  const { catchPhrase, authIntentTitle, submitLabel, alternateAction } =
     skeleton.modes[authState];
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -74,6 +75,7 @@ export function AuthenticationForm({
                   required
                   onChange={handlePasswordChange}
                   value={password}
+                  autoComplete={`ping-pilot section-${authState} current-password`}
                 />
               </div>
               <Button type="submit" className="w-full" onClick={onBtnClick}>
