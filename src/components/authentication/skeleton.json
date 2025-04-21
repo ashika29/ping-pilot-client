@@ -1,0 +1,17 @@
+{
+  "default": "login",
+  "modes": {
+    "login": {
+      "authIntentTitle": "Login to your Ping Pilot account",
+      "catchPhrase": "Welcome back",
+      "submitLabel": "Login",
+      "alternateAction": "Don't have an account?"
+    },
+    "signup": {
+      "authIntentTitle": "Create your Ping Pilot account",
+      "catchPhrase": "Join us today",
+      "submitLabel": "Sign up",
+      "alternateAction": "Already have an account?"
+    }
+  }
+}
