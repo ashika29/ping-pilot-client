@@ -1,9 +1,26 @@
 # ping-pilot
+
 This project is about a monitoring system for any application/website
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+
+### For Developers
+
+First, clone the repo:
+
+```bash
+git clone https://github.com/ashika29/ping-pilot-client.git
+```
+
+Then install all dependencies (kindly check to have npm >= 10.9.2)
+
+```bash
+npm install -f
+```
+
+### Running The App
 
 First, run the development server:
 
